@@ -54,6 +54,31 @@ public class a2cont {
             }
             System.out.println("-------------------------------");
         }
+        System.out.print("Enter a number to count digits: ");
+        int number = input.nextInt();
+        int cnt = 0;
+        int temp = number;
+
+        if (temp == 0) {
+            cnt = 1;
+        } else {
+            while (temp != 0) {
+                temp /= 10;
+                cnt++;
+            }
+        }
+        System.out.println("Number of digits in " + number + ": " + cnt);
+        System.out.print("Enter a number to reverse: ");
+        number = input.nextInt();
+        int reversed = 0;
+        temp = number;
+
+        while (temp != 0) {
+            int digit = temp % 10;
+            reversed = reversed * 10 + digit;
+            temp /= 10;
+        }
+        System.out.println("Reversed number: " + reversed);
     }
 
 }
